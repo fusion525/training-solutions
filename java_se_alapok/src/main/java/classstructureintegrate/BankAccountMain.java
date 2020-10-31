@@ -1,5 +1,6 @@
 package classstructureintegrate;
 
+import javax.sound.midi.Soundbank;
 import java.util.Scanner;
 
 public class BankAccountMain {
@@ -24,7 +25,7 @@ public class BankAccountMain {
         int balance2 = scanner.nextInt();
         scanner.nextLine();
 
-        BankAccount to = new BankAccount(accountNumber2, owner2, balance2);
+        BankAccount transfer = new BankAccount(accountNumber2, owner2, balance2);
 
         System.out.println("Amount of Deposit:");
         first.deposit(scanner.nextInt());
@@ -33,6 +34,11 @@ public class BankAccountMain {
         System.out.println("Amount of Withdraw:");
         first.withdraw(scanner.nextInt());
         scanner.nextLine();
+
+        System.out.println("Amount of transfer:");
+        first.transfer(transfer, scanner.nextInt());
+
+        transfer.getInfo();
 
         first.getInfo();
 

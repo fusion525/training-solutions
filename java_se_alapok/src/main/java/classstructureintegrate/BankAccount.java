@@ -17,8 +17,8 @@ public class BankAccount {
     public void withdraw(int withdraw) {
         this.balance -= withdraw;
     }
-    public void transfer(BankAccount to, int amount) {
-        to.balance += amount;
+    public void transfer(BankAccount transfer, int amount) {
+        transfer.balance += amount;
         this.balance -= amount;
     }
 

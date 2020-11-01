@@ -1,0 +1,31 @@
+package introdate;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+public class Employee {
+    String name;
+    LocalDate dateOfBirth;
+    LocalDateTime beginEmployment;
+
+    public Employee (int year, int month, int day, String name) {
+        this.name = name;
+        this.dateOfBirth = LocalDate.of(year, month, day);
+        this.beginEmployment = LocalDateTime.now();
+    }
+
+    public LocalDate getDateOfBirth() {
+        return dateOfBirth;
+    }
+    public String getName() {
+        return name;
+    }
+    public LocalDateTime getBeginEmployment() {
+        return beginEmployment;
+    }
+    public  void setName(String name) {
+        this.name = name;
+    }
+
+}
+

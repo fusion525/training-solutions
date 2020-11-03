@@ -31,11 +31,11 @@ public class Book {
         books.add("Antigoné");
         books.add("Egri csillagok");
         books.add("A kis herceg");
-        books.add("Egri csillagok");
+        books.add("Antigoné");
 
         System.out.println(books.getBook());
 
-        System.out.println(books.findAllByPrefix("Egri"));
+        System.out.println(books.findAllByPrefix("Antigoné"));
 
     }
 

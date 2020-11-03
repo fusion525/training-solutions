@@ -1,6 +1,11 @@
 package array;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class ArrayMain {
+
+
     public static void main(String[] args) {
 
 
@@ -31,7 +36,18 @@ public class ArrayMain {
         for (boolean item: booleans ) {
             System.out.println(item);
         }
+
+        String[] numberOfDays = {"31", "29", "31", "30", "31", "31", "31", "30", "31", "31", "30", "31"};
+        System.out.println(Arrays.toString(numberOfDays));
+
+        String[] daysOfWeek = {"Monday", "Tuesday", "Thursday", "Friday", "Saturday", "Sunday" };
+
+        System.out.println(Arrays.asList(daysOfWeek));
     }
+
+
+
+
 
 }
 

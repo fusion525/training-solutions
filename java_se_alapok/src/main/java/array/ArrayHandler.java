@@ -2,31 +2,39 @@ package array;
 
 public class ArrayHandler {
 
-        public boolean contains( int[] source, int itemToFind){
+        public boolean contains(int[] source, int itemTofind){
 
-            boolean isContains = false;
-
-            for (int i = 0; i < source.length && isContains != true; i++) {
-                if (source[i] == itemToFind) {
-                    isContains = true;
+            for(int item : source) {
+                if(item == itemTofind) {
+                    return true;
                 }
             }
-            return isContains;
+            return false;
         }
 
-        public int find ( int[] source, int itemToFind){
-
-            int index = -1;
-
-            boolean isContains = false;
-
-            for (int i = 0; i < source.length && isContains != false; i++) {
+        public int find(int[] source, int itemToFind){
+            for (int i = 0; i<source.length;i++) {
                 if (source[i] == itemToFind) {
-                    index = i;
-                    isContains = true;
+                    return i;
                 }
             }
-            return index;
+            return -1;
         }
+
+    public static void main(String[] args) {
+        ArrayHandler arrayHandler = new ArrayHandler();
+
+        final int[] testArray = new int[]{1,3,5,10};
+
+        System.out.println("contains");
+
+        System.out.println(arrayHandler.contains(testArray, 8));
+        System.out.println(arrayHandler.contains(testArray, 5));
+
+        System.out.println("find");
+        System.out.println(arrayHandler.find(testArray, 8));
+        System.out.println(arrayHandler.find(testArray, 5));
+
+    }
 
 }

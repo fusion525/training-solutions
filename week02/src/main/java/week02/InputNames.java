@@ -13,7 +13,7 @@ public class InputNames {
         }
 
         for (int i = 0; i<5; i++) {
-            System.out.println(i + "." + " elem: " + nevek[i] );
+            System.out.println(i + " .elem: " + nevek[i] );
         }
     }
 }

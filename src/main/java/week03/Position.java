@@ -18,14 +18,12 @@ public class Position {
 
     public static void main(String[] args) {
         ArrayList<Position> arrayList = new ArrayList<>();
-        arrayList.add(new Position("Boss", 150_000) );
+        arrayList.add(new Position("CEO", 150_000) );
         arrayList.add(new Position("Manager", 100_000) );
         arrayList.add(new Position("Programmer", 1_500_000) );
 
         for (Position positions : arrayList) {
-            if (positions.getBonus() > 150_000) {
-                System.out.println(positions);
-            }
+            if (positions.getBonus() > 150_000) System.out.println(positions);
         }
     }
 

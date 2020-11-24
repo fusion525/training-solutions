@@ -11,6 +11,8 @@ public class ChangeLetterTest {
     @Test
     public void testChangeVowels(){
         assertEquals("Th* q**ck br*wn f*x j*mp*d *v*r th* l*zy d*g.", changeletter.changeVowels("The quick brown fox jumped over the lazy dog."));
+        assertEquals("J*hn D**", changeletter.changeVowels("John Doe"));
+        assertEquals("ccccccc", changeletter.changeVowels("ccccccc"));
     }
 
 

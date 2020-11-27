@@ -1,5 +1,7 @@
 package week05d05;
 
+import java.util.StringJoiner;
+
 public class User {
 
     private String firstname;
@@ -22,8 +24,11 @@ public class User {
     }
 
     public String getName() {
+        StringJoiner nameJoiner = new StringJoiner(" ");
+        nameJoiner.add(firstname).add(lastname);
+        String fullName = nameJoiner.toString();
 
-        return firstname + " " + lastname;
+        return fullName;
     }
 
 }

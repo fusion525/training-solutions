@@ -16,13 +16,7 @@ public class TestMathAlgorithms {
          assertTrue(isPrime(13));
          assertTrue(isPrime(3));
          assertFalse(isPrime(14));
-
-    }
-
-    @Test
-    public void xLessThanZeroShouldThrowException() {
-
-        Exception ex = assertThrows(IllegalStateException.class, () -> isPrime(-2));
+         assertFalse(isPrime(-3));
 
     }
 

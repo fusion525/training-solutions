@@ -4,14 +4,7 @@ public class MathAlgorithms {
 
     public static boolean isPrime(int x) {
 
-        if (x < 0) {
-            throw new IllegalStateException();
-        }
-        else {
-
-            return countDividers(x) == 2;
-
-        }
+        return countDividers(x) == 2;
 
     }
 
@@ -31,6 +24,10 @@ public class MathAlgorithms {
 
         return x % divider == 0;
 
+    }
+
+    public static void main(String[] args) {
+        System.out.println(isPrime(-3));
     }
 
 }

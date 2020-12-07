@@ -26,8 +26,4 @@ public class MathAlgorithms {
 
     }
 
-    public static void main(String[] args) {
-        System.out.println(isPrime(-3));
-    }
-
 }

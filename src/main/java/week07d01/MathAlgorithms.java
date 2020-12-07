@@ -15,7 +15,9 @@ public class MathAlgorithms {
 
             if (isDividend(x,i)) {
                 sum++;
+
             }
+
         }
         return sum;
     }

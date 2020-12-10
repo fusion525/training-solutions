@@ -36,19 +36,4 @@ public class Lab {
         return this.title + " " + this.completed + " " + this.completedAt;
     }
 
-    public static void main(String[] args) {
-        Lab lab = new Lab("Java");
-        System.out.println(lab.toString());
-
-        Lab lab2 = new Lab("c++",LocalDateTime.of(2020,12,9,12,3));
-        System.out.println(lab2.toString());
-
-        lab.complete(LocalDateTime.of(2020,12,10,16,0));
-        System.out.println(lab.toString());
-
-        Lab lab3 = new Lab("Python");
-        lab3.complete();
-        System.out.println(lab3.toString());
-    }
-
 }

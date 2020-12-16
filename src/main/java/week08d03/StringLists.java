@@ -5,14 +5,14 @@ import java.util.List;
 
 public class StringLists {
 
-    public static void copy(List<String> first, List<String> union) {
-        for (String content : first) {
-            union.add(content);
+    public static void copy(List<String> source, List<String> target) {
+        for (String content : source) {
+            target.add(content);
         }
     }
 
-    public static boolean isContain(List<String> second, String item) {
-        for (String content : second) {
+    public static boolean isContain(List<String> list, String item) {
+        for (String content : list) {
             if (content.equals(item)) {
                 return true;
             }

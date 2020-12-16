@@ -20,7 +20,7 @@ public class StringListsTest {
         first.add("Mercedes");
 
         List<String> second = new ArrayList<>();
-        second.add("Audi");
+        second.add("Suzuki");
         second.add("Tesla");
         second.add("Volvo");
         second.add("Renault");
@@ -30,6 +30,7 @@ public class StringListsTest {
         unionTest.add("Seat");
         unionTest.add("Volvo");
         unionTest.add("Mercedes");
+        unionTest.add("Suzuki");
         unionTest.add("Tesla");
         unionTest.add("Renault");
 

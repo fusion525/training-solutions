@@ -26,7 +26,7 @@ public class StringLists {
         copy(first,union);
 
         for (int i = 0; i < second.size(); i++) {
-            if (!(isContain(second,first.get(i)))) {
+            if (!(isContain(first,second.get(i)))) {
                 union.add(second.get(i));
             }
         }

@@ -5,11 +5,11 @@ import java.util.List;
 
 public class Cv {
 
-    private String Name;
+    private String name;
     private List<Skill> skills;
 
     public Cv(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public String getName() {

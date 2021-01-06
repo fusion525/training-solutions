@@ -1,6 +1,5 @@
 package exam02.cv;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Cv {
@@ -13,7 +12,7 @@ public class Cv {
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void addSkills(Skill... skill) {

@@ -1,12 +1,11 @@
 package exam02;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ArraySelector {
 
     public String selectEvens(int[] numbers) {
-
-        if (numbers.length == 0) {
-            return "";
-        }
 
         StringBuilder textBuilder = new StringBuilder();
 
@@ -21,6 +20,6 @@ public class ArraySelector {
             }
         }
         return textBuilder + "]";
-    }
 
+    }
 }

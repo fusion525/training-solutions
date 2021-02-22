@@ -19,5 +19,6 @@ public class OwlCounterTest {
         assertEquals(1000, owlCounter.getNumberOfOwls("Bács-Kiskun"));
         assertEquals(893, owlCounter.getNumberOfOwls("Somogy"));
         assertEquals(135, owlCounter.getNumberOfOwls("Zala"));
+
     }
 }

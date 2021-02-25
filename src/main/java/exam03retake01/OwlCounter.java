@@ -1,56 +1,34 @@
-/*
-    Sok időm elment a hibakereséssel nem tudtam rájönni sajnos
-    Megyek vissza gyakorolni ...
-*/
-
-
 package exam03retake01;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.io.InputStreamReader;
 
 public class OwlCounter {
 
     private Map<String, Integer> owls = new HashMap<>();
 
-    public void readFromFile(BufferedReader reader) {
-
-        //String path = "C:\\Users\\matraisz\\Documents\\Training\\training-solutions\\src\\main\\resources\\owls.txt";
-
-        try (reader) {
+    public void readFromFile(BufferedReader reader) throws IOException {
 
             String line;
+
             while ((line = reader.readLine()) != null) {
 
-                String[] parts = line.split("=", 2);
+                String[] parts = line.split("=");
 
-                if (parts.length >= 2) {
-                    String county = parts[0];
-                    String owl = parts[1];
-                    owls.put(county, Integer.parseInt(owl));
-                }
-
+                String county = parts[0];
+                Integer count = Integer.parseInt(parts[1]);
+                owls.put(county, count);
             }
         }
-        catch (IOException ioe) {
-            throw new IllegalStateException("Can not read file", ioe);
-        }
 
-    }
 
-    public int getNumberOfOwls(String findCounty) {
+    public int getNumberOfOwls(String county) {
 
-        int numberOfOwls = 0;
+        return owls.get(county);
 
-        for (Map.Entry entry : owls.entrySet()) {
-
-            if (entry.getKey().equals(findCounty)) {
-                numberOfOwls = owls.get(entry);
-            }
-        }
-        return numberOfOwls;
     }
 
 }

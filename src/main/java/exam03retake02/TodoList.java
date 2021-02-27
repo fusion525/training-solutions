@@ -1,6 +1,7 @@
 package exam03retake02;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class TodoList {
@@ -58,13 +59,15 @@ public class TodoList {
 
     public void deleteCompleted() {
 
-        for (Todo todo : todos) {
+        for (Iterator<Todo> iterator = todos.iterator(); iterator.hasNext();) {
+                Todo todo = iterator.next();
 
-            if (todo.getState() == State.COMPLETED) {
-                todos.remove(todo);
+            if (todo.getState().equals(State.COMPLETED)) {
+                iterator.remove();
             }
+
         }
 
-    }
+        }
 
 }

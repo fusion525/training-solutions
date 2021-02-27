@@ -31,21 +31,24 @@ public class TodoList {
         return sum;
     }
 
-    public List<Todo> getMostImportantTodosText() {
+    public List<String> getMostImportantTodosText() {
 
-        int max = 0;
-        List<Todo> mostImportants = new ArrayList<>();
+        int mini = 0;
+        List<String> mostImportants = new ArrayList<>();
+        int maxPriority = 1;
 
         for (int i = 0; i<todos.size(); i++) {
-            if (todos.get(i).getPriority() > max) {
-                max = todos.get(i).getPriority();
+            if (todos.get(i).getPriority() < todos.get(mini).getPriority()) {
+                mini = i;
             }
         }
 
+        maxPriority = todos.get(mini).getPriority();
+
         for (Todo todo : todos) {
 
-            if (todo.getPriority() == max) {
-                mostImportants.add(todo);
+            if (todo.getPriority() == maxPriority) {
+                mostImportants.add(todo.getText());
             }
         }
 

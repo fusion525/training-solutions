@@ -16,7 +16,7 @@ public class FindByIdMain {
                 Connection conn = dataSource.getConnection();
                 PreparedStatement ps = conn.prepareStatement("select emp_name from employees where id = ?");
                 ) {
-            ps.setLong(1,3L);
+            ps.setLong(1,2L);
 
             try (ResultSet rs = ps.executeQuery()) {
                 if (rs.next()) {

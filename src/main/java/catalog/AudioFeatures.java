@@ -6,9 +6,9 @@ import java.util.List;
 public class AudioFeatures implements Feature {
 
     private List<String> composer;
-    private final int length;
-    private final List<String> performers;
-    private final String title;
+    private int length;
+    private List<String> performers;
+    private String title;
 
     public AudioFeatures(String title, int length, List<String> performers, List<String> composer) {
         this.composer = composer;
